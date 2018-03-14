@@ -17,3 +17,19 @@ tyler
 ## Create Likelihood function
 
 Likelihood(tyler, 3)
+
+## Create Prior function
+
+setGeneric(name = "Prior",
+           def = function(theta){
+             standardGeneric("Prior")
+           })
+
+setMethod(f = "Prior",
+          signature = "numeric",
+          definition = function(theta){
+            return (dnorm(theta, mean = 0, sd = 3))
+          })
+
+Prior(3)
+dnorm(3,0,3)
