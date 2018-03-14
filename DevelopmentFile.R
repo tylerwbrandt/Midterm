@@ -13,3 +13,18 @@ package.skeleton()
 Probability(tyler, 3)
 
 tyler
+
+## Create Likelihood function
+setGeneric(name = "Likelihood",
+           def = function(raschObj, theta){
+             standardGeneric("Likelihood")
+           })
+
+setMethod(f = "Likelihood",
+          signature = c("Rasch", "numeric"),
+          definition = function(raschObj, theta){
+            PQ <- Probability(raschObj, theta)
+            return (prod(PQ))
+          })
+
+Likelihood(tyler, 3)
