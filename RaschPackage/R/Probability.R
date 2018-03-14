@@ -18,3 +18,17 @@
 #' @rdname Probability
 #' @aliases Probability, Probability Rasch Method
 #' @export
+setGeneric(name = "Probability",
+           def = function(raschObj, theta){
+             standardGeneric("Probability")
+           })
+
+setMethod(f = "Probability",
+          signature = c("Rasch", "numeric"),
+          definition = function(raschObj, theta){
+            x <- exp(theta - raschObj@a)
+            y <- 1+x
+            P <- x/y
+            PQ <- P^(raschObj@y_j) * (1-P)^(1-raschObj@y_j)
+            return (list(P,PQ))
+          })
