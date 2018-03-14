@@ -15,6 +15,7 @@ setGeneric(name = "Probability",
            })
 
 setMethod(f = "Probability",
+          signature = "Rasch",
           definition = function(raschObj, theta){
             x <- exp(theta - raschObj@a)
             y <- 1+x
