@@ -14,3 +14,13 @@
 #' @rdname Prior
 #' @aliases Prior, Prior Numeric Method
 #' @export
+setGeneric(name = "Prior",
+           def = function(theta){
+             standardGeneric("Prior")
+           })
+
+setMethod(f = "Prior",
+          signature = "numeric",
+          definition = function(theta){
+            return (dnorm(theta, mean = 0, sd = 3))
+          })
