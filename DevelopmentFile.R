@@ -19,8 +19,10 @@ setMethod(f = "Probability",
             x <- exp(theta - raschObj@a)
             y <- 1+x
             P <- x/y
-            Q <- P^(raschObj@y_j) * (1-P)^(1-raschObj@y_j)
+            PQ <- P^(raschObj@y_j) * (1-P)^(1-raschObj@y_j)
+            return (list(P,PQ))
           })
 
+Probability(tyler, 3)
 
-
+tyler
