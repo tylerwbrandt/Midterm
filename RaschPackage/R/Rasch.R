@@ -11,7 +11,7 @@
 #' }
 #'
 #' @author Tyler Brandt" \email{brandttyler@@wustl.edu}
-#' @aliases Rasch Initialize
+#' @aliases Rasch Initialize, Rasch Validitiy, Rasch Print
 #' @rdname Rasch
 #' @export
 setClass(Class = "Rasch",
