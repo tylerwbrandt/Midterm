@@ -25,3 +25,11 @@ setClass(Class = "Rasch",
            a = c(),
            y_j = c()
          ))
+
+#' @export
+setMethod("initialize", "Rasch", 
+          function(.Object, ...){
+            value=callNextMethod()
+            return(value)
+          }
+) 
