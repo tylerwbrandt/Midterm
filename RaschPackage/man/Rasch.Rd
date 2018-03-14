@@ -10,7 +10,7 @@
 \alias{print,Rasch-method}
 \title{A student who took a test with his difficulty and answers}
 \usage{
-\S4method{print}{Rasch}(x)
+\S4method{print}{Rasch}(x, lower = -6, upper = 6)
 }
 \description{
 Object of class \code{Rasch} are used in the \code{Probability}, \code{Likelihood}, \code{Prior}, \code{EAP} functions

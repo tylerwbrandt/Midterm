@@ -40,3 +40,5 @@ EAP(tyler, 0, 6)
 
 ## Example of print method for Rasch Objects
 print(tyler)
+print(tyler, lower = 0, upper = 6)
+
