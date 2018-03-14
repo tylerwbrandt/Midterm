@@ -34,6 +34,27 @@ setMethod("initialize", "Rasch",
           }
 ) 
 
+#' @export
+setValidity("Rasch", function(object){
+  lengtha <- length(object@a)
+  lengthy <- length(object@y_j)
+  if (lengtha != lengthy){
+    return ("@a must be of same length as @y")
+  }
+  if (class(object@name) != "character"){
+    return ("@name must be of class character")
+  }
+  if (class(object@a) != "numeric"){
+    return ("@a must be of class numeric")
+  }
+  if (class(object@y_j) != "numeric"){
+    return ("@y_j must be of class numeric")
+  }
+  if (length(object@name) != 1){
+    return ("@name must be of length 1")
+  }
+})
+
 #' @rdname Rasch
 #' @export
 setMethod(f = "print",
