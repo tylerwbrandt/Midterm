@@ -24,32 +24,7 @@ Prior(3)
 dnorm(3,0,3)
 
 ## Create EAP function
-setGeneric(name = "EAP",
-           def = function(raschObj, lower = -6, upper = 6){
-             standardGeneric("EAP")
-           })
-
-setMethod(f = "EAP",
-          signature = "Rasch",
-          definition = function(raschObj, lower = -6, upper = 6){
-            f <- function(theta){
-              return (theta * Likelihood(raschObj, theta) * Prior(theta))
-            }
-            numerator <- integrate(f, lower, upper)[[1]]
-            g <- function(theta){
-              return (Likelihood(raschObj, theta) * Prior(theta))
-            }
-            denominator <- integrate(g, lower, upper)[[1]]
-            return (numerator/denominator)
-          })
 
 EAP(tyler, -6, 6)
 
-f <- function(theta){
-  return(theta * Likelihood(tyler, theta) * Prior(theta))
-}
-g <- function(theta){
-  return (Likelihood(tyler, theta) * Prior(theta))
-}
-numerator <- integrate(f, -5, 6)
-numerator[[1]]
+
