@@ -14,3 +14,14 @@
 #' @aliases Rasch Initialize
 #' @rdname Rasch
 #' @export
+setClass(Class = "Rasch",
+         representation = representation(
+           name = "character",
+           a = "numeric",
+           y_j = "numeric"
+         ),
+         prototype = prototype(
+           name = "",
+           a = c(),
+           y_j = c()
+         ))
