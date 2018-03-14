@@ -33,3 +33,11 @@ setMethod("initialize", "Rasch",
             return(value)
           }
 ) 
+
+#' @rdname Rasch
+#' @export
+setMethod(f = "print",
+          signature = "Rasch",
+          definition = function(x){
+            print(list(x@name, EAP(x)))
+          })

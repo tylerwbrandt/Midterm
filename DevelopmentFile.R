@@ -29,11 +29,3 @@ EAP(tyler, -6, 6)
 
 ## Print method for Rasch Objects
 print(tyler)
-
-setMethod(f = "print",
-          signature = "Rasch",
-          definition = function(x){
-            print(list(x@name, EAP(x)))
-          })
-
-print(tyler)
