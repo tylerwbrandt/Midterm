@@ -13,6 +13,10 @@ test(current.code)
 
 ## Example of Rasch class
 tyler <- new(Class = "Rasch", name = "Tyler", a = c(1,2,3), y_j = c(1,0,1))
+tyler
+
+## Errors of new Rasch classes
+new(Class = "Rasch", name = "Tyler", a = c(1,2,3,4), y_j = c(1,0,1))
 
 ## Example of Probability function
 # Gives probability that Tyler got each of three questions right, assuming theta = 3
