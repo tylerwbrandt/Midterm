@@ -11,27 +11,28 @@ load_all(current.code)
 document(current.code)
 test(current.code)
 
-## Examples
+## Example of Rasch class
 tyler <- new(Class = "Rasch", name = "Tyler", a = c(1,2,3), y_j = c(1,0,1))
 
-## Create Probability function
-
+## Example of Probability function
+# Gives probability that Tyler got each of three questions right, assuming theta = 3
 Probability(tyler, 3)
 
-tyler
-
-## Create Likelihood function
-
+## Example of Likelihood function
+# Gives likelihood that theta = 3 is the correct value for theta
 Likelihood(tyler, 3)
 
-## Create Prior function
-
+## Example of Prior function
+# Gives a prior for theta = 3. Note that this is the same as dnorm(theta = 3, 0, 3)
 Prior(3)
 dnorm(3,0,3)
 
-## Create EAP function
+## Examples of EAP function
+# At defaults, EAP = 0
+EAP(tyler)
 
-EAP(tyler, -6, 6)
+# When lower != -upper, we get a different result
+EAP(tyler, 0, 6)
 
-## Print method for Rasch Objects
+## Example of print method for Rasch Objects
 print(tyler)
