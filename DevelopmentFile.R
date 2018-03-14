@@ -23,7 +23,7 @@ setGeneric(name = "Likelihood",
 setMethod(f = "Likelihood",
           signature = c("Rasch", "numeric"),
           definition = function(raschObj, theta){
-            PQ <- unlist(Probability(raschObj, theta))
+            PQ <- Probability(raschObj, theta)[[2]]
             return (prod(PQ))
           })
 
