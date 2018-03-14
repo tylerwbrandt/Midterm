@@ -1,1 +1,6 @@
-exportPattern("^[[:alpha:]]+")
+exportClasses(Rasch)
+exportMethods(Probability)
+exportMethods(Likelihood)
+exportMethods(Prior)
+exportMethods(EAP)
+exportMethods(print)
