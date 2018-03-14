@@ -17,3 +17,14 @@
 #' @rdname Likelihood
 #' @aliases Likelihood, Likelihood Rasch Method
 #' @export
+setGeneric(name = "Likelihood",
+           def = function(raschObj, theta){
+             standardGeneric("Likelihood")
+           })
+
+setMethod(f = "Likelihood",
+          signature = c("Rasch", "numeric"),
+          definition = function(raschObj, theta){
+            PQ <- Probability(raschObj, theta)[[2]]
+            return (prod(PQ))
+          })
