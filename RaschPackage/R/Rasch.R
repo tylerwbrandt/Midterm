@@ -59,6 +59,6 @@ setValidity("Rasch", function(object){
 #' @export
 setMethod(f = "print",
           signature = "Rasch",
-          definition = function(x){
-            print(list(x@name, EAP(x)))
+          definition = function(x, lower = -6, upper = 6){
+            print(list(x@name, EAP(x, lower, upper)))
           })

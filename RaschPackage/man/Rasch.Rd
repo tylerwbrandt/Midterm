@@ -4,7 +4,9 @@
 \name{Rasch-class}
 \alias{Rasch-class}
 \alias{Rasch}
-\alias{Initialize}
+\alias{Initialize,}
+\alias{Validitiy,}
+\alias{Print}
 \alias{print,Rasch-method}
 \title{A student who took a test with his difficulty and answers}
 \usage{
