@@ -1,10 +1,15 @@
-Package: anRpackage
-Type: Package
-Title: What the package does (short line)
+Package: RaschPackage
+Title: Estimating theta parameter for Rasch equation
 Version: 1.0
 Date: 2018-03-14
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Tyler Brandt
+Maintainer: Tyler Brandt <brandttyler@wustl.edu>
+Description: Finds probability that a student got each question right, likelihood that theta is accurate, a prior for theta, and the eap of theta.
+License: GPL (>= 2)
+Collate:
+  'Rasch.R'
+  'Probability.R'
+  'Likelihood.R'
+  'Prior.R'
+  'EAP.R'
 RoxygenNote: 6.0.1
