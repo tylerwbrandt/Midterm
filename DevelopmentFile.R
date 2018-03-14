@@ -44,3 +44,12 @@ setMethod(f = "EAP",
           })
 
 EAP(tyler, -6, 6)
+
+f <- function(theta){
+  return(theta * Likelihood(tyler, theta) * Prior(theta))
+}
+g <- function(theta){
+  return (Likelihood(tyler, theta) * Prior(theta))
+}
+numerator <- integrate(f, -6, 6)
+numerator
